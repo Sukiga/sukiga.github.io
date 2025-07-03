@@ -1,0 +1,179 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 4000px; 
+    background-color: #e2e2e2;
+}
+
+nav {
+    top: 0;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    background-color: #9b9b9b;
+    position: sticky;
+}
+
+.navItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+h1.blog {
+    font-size: 3rem;
+    margin-left: 10%;
+}
+
+h1.projects {
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: black;
+    background-position: center;
+    background-size: 50%;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color: transparent;
+}
+
+.logo h3 {
+    margin: 0;
+}
+
+a, a:visited, a:active, a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
+a.square:hover{
+    border: 10px solid rgb(161, 175, 161);
+    box-shadow: 10px 5px 5px rgb(197, 197, 197);
+    transition: all 0.1s ease-in-out;
+}
+
+.squares{
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blogsContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.square {
+    height: 250px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.rectangle {
+    height: 100px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Pop up window below
+*/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+.popupWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 25px;
+    width: 500px;
+    max-width: 80%;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    background-color: rgba(28, 107, 28, 0.3); 
+    box-shadow: 10px 5px 5px grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupWindow.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.popupWindowContent {
+    border-radius: 25px;
+    text-align: center;
+    width: 380px;
+}
+
+.popupTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+}
+
+.popupTop > h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.popupTop .closePopup {
+    all: unset;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.closePopup {
+    display: block;
+    background-color: transparent;
+}
+
+a.noUnderline {
+    font-size: 20px;
+}
+
+a.noUnderline:hover {
+    font-size: 29px;
+    text-decoration: none;
+    transition: all 0.005s ease-in-out;
+}
+
+
+/* Pop up window ends here
+*/
+
