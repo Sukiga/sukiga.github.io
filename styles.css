@@ -32,10 +32,7 @@ nav {
     gap: 20px;
 }
 
-h1.blog {
-    font-size: 3rem;
-    margin-left: 10%;
-}
+
 
 h1.projects {
     font-size: 6rem;
@@ -77,12 +74,6 @@ a.square:hover{
     justify-content: space-around;
 }
 
-.blogsContainer {
-    display: flex;
-    align-items: center;
-    margin-left: 10%;
-}
-
 .square {
     height: 250px;
     width: 250px;
@@ -90,12 +81,38 @@ a.square:hover{
     border-radius: 25px;
 }
 
-.rectangle {
-    height: 100px;
+.blogsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    justify-content: flex-end;
+}
+
+.blogsContainer > h1, .blog {
+    font-size: 3rem;
+}
+
+.blog {
+    height: 60px;
     width: 250px;
     background-color: #ffffff;
-    border-radius: 10px;
+    margin: 0.5rem;
 }
+
+.blog:hover {
+    cursor: pointer;
+}
+
+.blog > h3 {
+    margin: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.blog > h4 {
+    font-size: 1rem;
+    margin: 0.3rem;
+}
+
 
 /* Pop up window below
 */
@@ -113,7 +130,6 @@ a.square:hover{
     transition: all 0.3s ease-in-out;
     z-index: -1;
     border-radius: 25px;
-    width: 500px;
     max-width: 80%;
     backdrop-filter: blur(3px);
     opacity: 0;
@@ -132,8 +148,9 @@ a.square:hover{
 
 .popupWindowContent {
     border-radius: 25px;
-    text-align: center;
-    width: 380px;
+    text-align: start;
+    width: 500px;
+    margin: 1rem;
 }
 
 .popupTop {
